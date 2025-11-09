@@ -1,0 +1,55 @@
+@import "../../_globalColor";
+
+.achievement-heading {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px;
+
+  @media (max-width: 1380px) {
+    font-size: 40px;
+  }
+  @media (max-width: 768px) {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+.achievement-subtitle {
+  text-transform: uppercase;
+  margin: 0px;
+  margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+}
+
+.subTitle {
+  color: $subTitle;
+}
+
+// Grid layout for the achievement cards
+.achievement-cards-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 90%;
+  margin: 20px auto 0;
+  align-items: stretch; // Makes cards in a row equal height
+}
+
+@media (max-width: 1200px) {
+  .achievement-cards-div {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievement-cards-div {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}

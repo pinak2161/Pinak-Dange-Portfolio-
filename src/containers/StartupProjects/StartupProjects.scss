@@ -1,0 +1,125 @@
+@import "../../_globalColor";
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.card-title {
+  color: $titleColor;
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 15px 0 10px 0;
+}
+.card-subtitle {
+  color: $cardSubtitle;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-line; // This makes the "\n" work for your Tech Stack
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $lightBackground2;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid $lightBorder1; // Light mode border
+  justify-content: space-between;
+  height: 100%;
+  transition: all 0.3s ease-out;
+}
+.project-card-light {
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  border: 2px solid #dfdddd;
+}
+.project-card-dark {
+  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
+  border: 1px solid #454545; // <-- THIS IS THE FIX
+}
+
+.project-detail {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* --- ENHANCED HOVER EFFECT --- */
+.project-card-light:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: $lightBoxShadowDark 0px 22px 40px -15px;
+}
+
+.project-card-dark:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0px 22px 40px -10px $darkBoxShadow;
+}
+/* --- END HOVER EFFECT --- */
+
+.project-image {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- 4-COLUMN GRID LAYOUT --- */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // 4 columns on desktop
+  gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.project-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.project-card-footer span.project-tag {
+  background: $buttonColor;
+  color: $lightBackground3;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  font-size: 0.75rem;
+  height: 2em;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 1.5;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0 0.75em;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+/* --- MEDIA QUERIES for Responsiveness --- */
+@media (max-width: 1200px) {
+  .projects-container {
+    /* 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+  .projects-container {
+    /* 1 column on mobile */
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
