@@ -8,7 +8,7 @@ export default function socialMedia() {
   }
   return (
     <div className="social-media-div">
-      {socialMediaLinks.github ? (
+      {/* {socialMediaLinks.github ? (
         <a
           href={socialMediaLinks.github}
           className="icon-button github"
@@ -18,7 +18,7 @@ export default function socialMedia() {
           <i className="fab fa-github"></i>
           <span></span>
         </a>
-      ) : null}
+      ) : null} */}
 
       {socialMediaLinks.linkedin ? (
         <a

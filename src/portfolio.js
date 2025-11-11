@@ -27,7 +27,7 @@ const greeting = {
 };
 
 const socialMediaLinks = {
-  github: "https://github.com/pinak2161",
+  //github: "https://github.com/pinak2161",
   linkedin: "https://www.linkedin.com/in/pinak-dange-335b35223",
   gmail: "pinakdange1621@gmail.com",
 
@@ -152,33 +152,17 @@ const projects = {
           name: "Visit Website",
           url: "https://corporate-banking-loan-origination.onrender.com/u have one"
         },
-        {
-          name: "View on GitHub",
-          url: "https://github.com/pinak2161/CBLOS-Corporate-Banking-Loan-Origination-System" // <-- TODO: Update with correct link
-        }
       ]
     },
     {
       image: require("./assets/images/agrotech.png"), // <-- Add 'agrotech.png' image to src/assets/images
       projectName: "AGROTECH - Smart Agricultural System",
       projectDesc: "Built a real-time monitoring system using soil moisture, temperature, and light sensors. Automated irrigation using threshold-based logic for water-efficient farming.\n\nTech Stack: IoT, Embedded Systems, Microcontrollers, Wireless Communication",
-      footerLink: [
-        {
-          name: "View on GitHub",
-          url: "https://github.com/pinak2161" // <-- TODO: Update with correct link
-        }
-      ]
     },
     {
       image: require("./assets/images/bhakalo.png"), // <-- Add 'bhakalo.png' image to src/assets/images
       projectName: "Bhakalo - The Fruit Shop (Desktop App)",
       projectDesc: "Developed an object-oriented Python app with Firebase login and a Firestore database. Integrated CalorieNinjas API for fruit nutrition info and built a full GUI.\n\nTech Stack: Python, OOP, Firebase, API Integration, Tkinter",
-      footerLink: [
-        {
-          name: "View on GitHub",
-          url: "https://github.com/pinak2161" // <-- TODO: Update with correct link
-        }
-      ]
     },
     {
       image: require("./assets/images/portfolio.png"), // <-- Add 'portfolio.png' image to src/assets/images
@@ -186,13 +170,9 @@ const projects = {
       projectDesc: "Created and deployed this responsive React website to showcase my projects and skills. Deployed using Vercel with continuous integration.\n\nTech Stack: React.js, React Router, JavaScript, SASS",
       footerLink: [
         {
-          name: "View on GitHub",
-          url: "https://github.com/pinak2161/Portfolio-Website" // <-- TODO: Update with correct link
+          name: "Visit my Website",
+          url: "https://www.pinakcv.site/" 
         },
-        {
-          name: "Visit Website",
-          url: "https://pinak-dange.vercel.app"
-        }
       ]
     }
   ]
