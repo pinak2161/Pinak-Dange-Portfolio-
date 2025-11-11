@@ -42,14 +42,15 @@ export default function Greeting() {
                 <Button text="Contact me" href="#contact" />
                 {greeting.resumeLink && (
                   <a
-                href={greeting.resumeLink}  /* <--- THIS IS THE FIX */
-                target="_blank"             /* <-- This opens it in a new tab */
-                rel="noopener noreferrer"   /* <-- Good security practice */
-                download="Pinak_Dange_Resume.pdf"
-                className="download-link-button"
-              >
-                <Button text="Download my resume" />
-              </a>
+                    // FINAL FIX: Uses the local file path from the public folder
+                    href="/Pinak_Dange_Resume.pdf" 
+                    target="_blank" // <-- Ensures it opens in a new tab
+                    rel="noopener noreferrer"
+                    // Removed the download attribute to allow browser to open PDF viewer
+                    className="download-link-button"
+                  >
+                    <Button text="Download my resume" />
+                  </a>
                 )}
               </div>
             </div>

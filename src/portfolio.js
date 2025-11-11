@@ -16,13 +16,14 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Pinak Dange",
-  title: "Hola! I'm Pinak",
-  subTitle: emoji(
-    "Full Stack Developer ⚡ | Building applications with Java, Spring Boot, Angular, React, Docker, and AWS."
-  ),
-  resumeLink: "https://drive.google.com/file/d/17A82qWARLg5_h6bA7f91T93PegATI-wf/view?usp=sharing",
-  displayGreeting: true 
+  username: "Pinak Dange",
+  title: "Hola! I'm Pinak",
+  subTitle: emoji(
+    "Full Stack Developer ⚡ | Building applications with Java, Spring Boot, Angular, React, Docker, and AWS."
+  ),
+  // UPDATED: Points to the local file in the public folder
+  resumeLink: "/Pinak_Dange_Resume.pdf", 
+  displayGreeting: true 
 };
 
 const socialMediaLinks = {

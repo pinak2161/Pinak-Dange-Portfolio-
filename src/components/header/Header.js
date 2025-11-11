@@ -9,7 +9,7 @@ import {
   educationInfo,
   bigProjects,
   achievementSection,
-  resumeSection // Keeping this import for its 'display' check, even if we don't display a component
+  resumeSection // Keeping this import for its 'display' check
 } from "../../portfolio";
 
 function Header() {
@@ -18,7 +18,7 @@ function Header() {
   const viewEducation = educationInfo.display;
   const viewProjects = bigProjects.display;
   const viewAchievement = achievementSection.display;
-  const viewResume = resumeSection.display; // Use this to conditionally show the Resume link
+  const viewResume = resumeSection.display; 
 
   return (
     <div className="header-fixed-wrapper">
@@ -38,7 +38,7 @@ function Header() {
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           
-          {/* 1. ABOUT ME (Links to #skills) */}
+          {/* 1. ABOUT ME (Links to #about-me) */}
           {viewEducation && viewSkills && (
             <li>
               <a href="#about-me">About Me</a> 
@@ -54,18 +54,19 @@ function Header() {
           {/* 3. ACCOMPLISHMENTS */}
           {viewAchievement && (
             <li>
-              <a href="#accomplishments">Accomplishments</a>
+              <a href="#achievements">Accomplishments</a>
             </li>
           )}
           
-          {/* 4. RESUME LINK (Direct link to the drive file) */}
+          {/* 4. RESUME LINK (FINAL FIX: OPENS LOCAL PDF IN NEW TAB) */}
           {viewResume && (
             <li>
               <a 
-                href="https://drive.google.com/file/d/1byYp6K_EVvibP4CXBFquKSqBAIyZt3eK/view?usp=drive_link" 
-                target="_blank" 
+                // Uses the local file path from the public folder
+                href="/Pinak_Dange_Resume.pdf" 
+                target="_blank" // <-- Opens in a new tab/PDF viewer
                 rel="noopener noreferrer" 
-                download="Pinak_Dange_Resume.pdf"
+                // Download attribute removed
               >
                 Resume
               </a>
